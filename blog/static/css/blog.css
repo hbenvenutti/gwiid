@@ -1,0 +1,146 @@
+header, section, aside, nav, footer, article, figure, figcaption {
+  display: block;
+}
+
+body{
+  margin: 0px;
+  background-color: #6cb7e7;
+}
+
+.page{
+  min-width: 1300px;
+  max-width: 1300px;
+  margin: 0px auto 0px auto;
+  padding: 0px;
+  background-color: #6cb7e7;
+}
+
+header{
+  height: 170px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+  color: #3866CD;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 5px 0px 0px 0px;
+}
+
+picture{
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+section{
+  padding: 30px;
+  color: #fff;
+  width: 1000px;
+  float: left;
+  border: 1px;
+  min-height: 600px;
+  background-color: #9ec2e3;
+  background-image: url('../img/back.jpg');
+}
+
+.rodape{
+  padding: 10px;
+  float: left;
+  width: 40%;
+  border-right: solid 1px;
+  height: 100%;
+}
+
+.forms{
+  width: 600px;
+  float: left;
+  margin: 10px 30px 10px 30px;
+}
+
+.esquerda{
+  float: left;
+    width: 200px;
+}
+
+.direita{
+  float: right;
+  width: 300px;
+}
+
+.camp{
+  width: 200px;
+}
+
+.ano{
+  width: 250px;
+}
+
+.h3{
+  text-align: left;
+}
+.u{
+  text-align: center;
+}
+table{
+  margin: auto;
+}
+
+th{
+  width: 100px;
+  padding: 5px;
+}
+
+.meucarro{
+  float: left;
+  max-width: 400px;
+}
+
+.estadios{
+  float: left;
+  padding: 30px;
+}
+
+aside{
+  float: left;
+  width: 300px;
+  min-height: 600px;
+  background-color: #9ec2e3;
+  border-left: solid 1px;
+}
+
+.conteudo{
+  clear: both;
+  margin-top: 30px;
+}
+
+nav{
+  text-align: left;
+  padding: 0px;
+  height: 60px;
+  border-radius: 5px;
+  clear: both;
+}
+
+footer{
+  height: 250px;
+  text-align: left;
+  display: inline-block;
+  clear: both;
+  color: #fff;
+  width: 100%;
+  min-width: 1300px;
+  background: #0f6dc4;
+}
+
+.my-form{
+    margin-left: 300px;
+    width: 260px;
+}
+
+.link{
+    color: #fff;
+}
+
+.post{
+    border: solid 1px;
+}

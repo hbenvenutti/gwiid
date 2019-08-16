@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Grêmio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+
+    <div class="page">
+        <header>
+            
+            <picture class="logo">
+                <img src="{% static 'img/img1.png' %}" alt="GREMIO">
+            </picture> <br><br>
+                
+            <h1>GRÊMIO FOOT-BALL PORTO ALEGRENSE</h1>
+    
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Grêmio</a>
+        
+                <button class="navbar-toggler" 
+                        type="button" data-toggle="collapse" 
+                        data-target="#navbarSupportedContent" 
+                        aria-controls="navbarSupportedContent" aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'home' %}">Home 
+                                
+                                <span class="sr-only">(current)</span></a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'stadiums' %}">Estádios</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" 
+                                id="navbarDropdown" role="button" data-toggle="dropdown" 
+                                aria-haspopup="true" aria-expanded="false">
+                                Títulos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'championships' %}">Tabela</a>
+                                <a class="dropdown-item" href="#">Mundial</a>
+                                <a class="dropdown-item" href="#">Libertadores</a>
+                                <a class="dropdown-item" href="#">Copa do Brasil</a>
+                                <a class="dropdown-item" href="#">Serie A</a>
+                            </div>
+                        </li>
+    
+                        {% if current_user.is_authenticated %}
+    
+                            <li>
+                                <a class="nav-link" href="">
+                                    All Users</a>
+                            </li>
+
+                            <li>
+                                <a class="nav-link" href="">
+                                    {{ current_user.name }}</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Logout</a>
+                            </li>
+    
+                        {% else %}
+    
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Inscreva-se</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+    
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" 
+                        placeholder="Search" aria-label="Search">
+                        
+                        <button class="btn btn-outline-info my-2 my-sm-0" 
+                                type="submit">Search</button>
+                    </form>
+
+                </div>
+            </nav>
+        </header>
+    
+        <div class="conteudo">
+            <section>
+                <article>
+    
+                    {%  block content  %}
+                    {%  endblock  %}
+    
+                </article>
+            </section>
+            
+            <aside>
+                <div class="LI-profile-badge"  data-version="v1" 
+                        data-size="large" data-locale="pt_BR" data-type="vertical" 
+                        data-theme="light" data-vanity="huam-benvenutti">
+                    <a class="LI-simple-link" 
+                        href='https://br.linkedin.com/in/huam-benvenutti?trk=profile-badge'>
+                        Huam Benvenutti</a>
+                </div>
+                
+                <h3 class="h3"><strong>LINKS:</strong></h3>
+                
+                <ul class="ul">
+                    <li><a href="https://www.gremio.net/">
+                            Site Oficial</a><br></li>
+                    <li><a href="https://getbootstrap.com/">
+                            Bootstrap</a></li>
+                    <li><a href="https://tinyurl.com/eduardodasilva">
+                            Site do professor</a></li>
+                </ul>
+            </aside>
+    
+        </div>
+    
+        <footer>
+            <div class="rodape">
+                
+                <h2>Contato</h2>
+                
+                <p> 
+                    email: contato@benvenutti.com <br>
+                    WhatsApp: (47) 99887-6543
+                </p>
+                
+                <br><br><br><hr>
+                
+                <p>&copy; Benvenutti Company 2017-2019</p>
+            </div>
+            
+            <div class="forms">
+                <h3> Deixe uma mensagem!</h3>
+            
+                <form class="fomulario" action="{% url 'home' %}" method="post">
+                    
+                    <div class="esquerda">
+                        
+                        <label for="nome">Nome:</label>
+                        <input class="form-control" type="text" 
+                            placeholder="Nome" id="nome" value="">
+                        
+                        <label for="e-mail">E-mail:</label>
+                        <input class="form-control" 
+                            type="text" id="e-mail" placeholder="E-mail" value="">
+
+                    </div>
+                
+                    <div class="direita">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" rows="3"></textarea><br>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+            
+                </form>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    
+    <script type="text/javascript" 
+            src="{% static 'js/profile.js' %}" async defer></script>
+
+</body>
+</html>
