@@ -1,17 +1,30 @@
+
+@font-face {
+  font-family: typewriter;
+  src: url('../fonts/TYPEWR__.TTF');
+}
+
+@font-face{
+  font-family: typewriter-black;
+  src: url('../fonts/TYPEWR_B.TTF');
+}
+
+@font-face{
+  font-family: greatfighter;
+  src: url('../fonts/Great\ Fighter\ Demo.ttf');
+}
+
+@font-face{
+  font-family: singlefighter;
+  src: url('../fonts/SINGLE\ FIGHTER.otf');
+}
+
 header, section, aside, nav, footer, article, figure, figcaption {
   display: block;
 }
 
 body{
   margin: 0px;
-  background-color: #6cb7e7;
-}
-
-.page{
-  min-width: 1300px;
-  max-width: 1300px;
-  margin: 0px auto 0px auto;
-  padding: 0px;
   background-color: #6cb7e7;
 }
 
@@ -24,6 +37,11 @@ header{
   width: 100%;
   background-color: #ffffff;
   padding: 5px 0px 0px 0px;
+}
+
+header h1 {
+
+  font-family: greatfighter;
 }
 
 picture{
@@ -43,44 +61,6 @@ section{
   background-image: url('../img/back.jpg');
 }
 
-.rodape{
-  padding: 10px;
-  float: left;
-  width: 40%;
-  border-right: solid 1px;
-  height: 100%;
-}
-
-.forms{
-  width: 600px;
-  float: left;
-  margin: 10px 30px 10px 30px;
-}
-
-.esquerda{
-  float: left;
-    width: 200px;
-}
-
-.direita{
-  float: right;
-  width: 300px;
-}
-
-.camp{
-  width: 200px;
-}
-
-.ano{
-  width: 250px;
-}
-
-.h3{
-  text-align: left;
-}
-.u{
-  text-align: center;
-}
 table{
   margin: auto;
 }
@@ -90,17 +70,8 @@ th{
   padding: 5px;
 }
 
-.meucarro{
-  float: left;
-  max-width: 400px;
-}
-
-.estadios{
-  float: left;
-  padding: 30px;
-}
-
 aside{
+
   float: left;
   width: 300px;
   min-height: 600px;
@@ -108,9 +79,9 @@ aside{
   border-left: solid 1px;
 }
 
-.conteudo{
-  clear: both;
-  margin-top: 30px;
+aside ul li a{
+
+  color: #000;
 }
 
 nav{
@@ -132,15 +103,93 @@ footer{
   background: #0f6dc4;
 }
 
-.my-form{
-    margin-left: 300px;
-    width: 260px;
+.ano{
+  width: 250px;
+}
+
+.camp{
+  width: 200px;
+}
+
+.card-text a{
+  color: rgb(83, 155, 250);
+}
+
+.conteudo{
+  clear: both;
+  margin-top: 30px;
+}
+
+.direita{
+  float: right;
+  width: 300px;
+}
+
+.esquerda{
+  float: left;
+    width: 200px;
+}
+
+.estadios{
+  float: left;
+  padding: 30px;
+}
+
+.forms{
+  width: 600px;
+  float: left;
+  margin: 10px 30px 10px 30px;
+}
+
+.h3{
+  text-align: left;
 }
 
 .link{
     color: #fff;
 }
 
+.linkedin{
+  
+  min-height: 300px;
+}
+
+.meucarro{
+  float: left;
+  max-width: 400px;
+}
+
+.my-form{
+    margin-left: 300px;
+    width: 260px;
+}
+
+.page{
+  min-width: 1300px;
+  max-width: 1300px;
+  margin: 0px auto 0px auto;
+  padding: 0px;
+  background-color: #6cb7e7;
+}
+
 .post{
     border: solid 1px;
+}
+
+.rodape{
+  padding: 10px;
+  float: left;
+  width: 40%;
+  border-right: solid 1px;
+  height: 100%;
+}
+
+.side-links{
+  background-image: url('../img/gremio.png');
+  max-height: 600px;
+  min-height: 300px;
+  padding: 15px 0px 0px 20px;
+  
+  font-family: greatfighter;
+  color: #000;
 }

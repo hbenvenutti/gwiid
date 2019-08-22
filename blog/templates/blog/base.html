@@ -13,7 +13,7 @@
     <div class="page">
         <header>
             
-            <picture class="logo">
+            <picture>
                 <img src="{% static 'img/img1.png' %}" alt="GREMIO">
             </picture> <br><br>
                 
@@ -59,7 +59,7 @@
                             </div>
                         </li>
     
-                        {% if current_user.is_authenticated %}
+                        {% if user.is_authenticated %}
     
                             <li>
                                 <a class="nav-link" href="">
@@ -68,17 +68,19 @@
 
                             <li>
                                 <a class="nav-link" href="">
-                                    {{ current_user.name }}</a>
+                                    {{ user.username }}</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="">Logout</a>
+                                <a class="nav-link" href="">
+                                    <img src="../../static/icons/sign-out.svg" alt="Logout"/>Logout</a>
                             </li>
     
                         {% else %}
     
                             <li class="nav-item">
-                                <a class="nav-link" href="">Login</a>
+                                <a class="nav-link" href="{% url 'login' %}">
+                                    <img src="../../static/icons/sign-in.svg" alt="Login"/>Login</a>
                             </li>
 
                             <li class="nav-item">
@@ -110,24 +112,29 @@
             </section>
             
             <aside>
-                <div class="LI-profile-badge"  data-version="v1" 
-                        data-size="large" data-locale="pt_BR" data-type="vertical" 
-                        data-theme="light" data-vanity="huam-benvenutti">
-                    <a class="LI-simple-link" 
-                        href='https://br.linkedin.com/in/huam-benvenutti?trk=profile-badge'>
-                        Huam Benvenutti</a>
+                <div class="linkedin">
+
+                    <div class="LI-profile-badge"  data-version="v1" 
+                            data-size="large" data-locale="pt_BR" data-type="vertical" 
+                            data-theme="light" data-vanity="huam-benvenutti">
+                        <a class="LI-simple-link" 
+                            href='https://br.linkedin.com/in/huam-benvenutti?trk=profile-badge'>
+                            Huam Benvenutti</a>
+                    </div>
                 </div>
+               
+                <div class="side-links">
+                    <h3 class="h3"><strong>LINKS:</strong></h3>
                 
-                <h3 class="h3"><strong>LINKS:</strong></h3>
-                
-                <ul class="ul">
-                    <li><a href="https://www.gremio.net/">
-                            Site Oficial</a><br></li>
-                    <li><a href="https://getbootstrap.com/">
-                            Bootstrap</a></li>
-                    <li><a href="https://tinyurl.com/eduardodasilva">
-                            Site do professor</a></li>
-                </ul>
+                    <ul class="ul">
+                        <li><a href="https://www.gremio.net/">
+                                Site Oficial</a><br></li>
+                        <li><a href="https://getbootstrap.com/">
+                                Bootstrap</a></li>
+                        <li><a href="https://tinyurl.com/eduardodasilva">
+                                Site do professor</a></li>
+                    </ul>
+                </div>
             </aside>
     
         </div>

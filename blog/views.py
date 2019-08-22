@@ -14,3 +14,14 @@ def championships(request):
 
 def stadiums(request):
     return render(request, 'blog/stadiums.html')
+
+
+# Authorization
+
+def login(request):
+    return render(request, 'auth/login.html')
+
+"""
+def register(request):
+    return render(request, 'auth/register.html')
+"""
