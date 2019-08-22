@@ -23,6 +23,25 @@ header, section, aside, nav, footer, article, figure, figcaption {
   display: block;
 }
 
+article{
+  padding-bottom: 20px;
+  max-height: 470px; 
+}
+
+aside{
+
+  float: left;
+  width: 300px;
+  min-height: 600px;
+  max-height: 650;
+  background-color: #9ec2e3;
+  border-left: solid 1px;
+}
+
+aside ul li a{
+  color: #000;
+}
+
 body{
   margin: 0px;
   background-color: #6cb7e7;
@@ -57,6 +76,8 @@ section{
   float: left;
   border: 1px;
   min-height: 600px;
+  max-height: 650;
+  overflow: auto;
   background-color: #9ec2e3;
   background-image: url('../img/back.jpg');
 }
@@ -70,19 +91,7 @@ th{
   padding: 5px;
 }
 
-aside{
 
-  float: left;
-  width: 300px;
-  min-height: 600px;
-  background-color: #9ec2e3;
-  border-left: solid 1px;
-}
-
-aside ul li a{
-
-  color: #000;
-}
 
 nav{
   text-align: left;
@@ -118,6 +127,11 @@ footer{
 .conteudo{
   clear: both;
   margin-top: 30px;
+  overflow: auto;
+}
+
+.date {
+  color: #828282;
 }
 
 .direita{
@@ -174,7 +188,7 @@ footer{
 }
 
 .post{
-    border: solid 1px;
+    margin-bottom: 30px;
 }
 
 .rodape{
