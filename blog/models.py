@@ -40,7 +40,8 @@ class Comment(models.Model):
     def __str__(self):
         return self.text
 
-
+"""
 class Follow(models.Model):
     followed = models.ForeignKey(settings.AUTH_USER_MODEL,
                                  on_delete=models.CASCADE)
+"""

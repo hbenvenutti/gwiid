@@ -152,6 +152,7 @@ footer{
 .linkedin{
   
   min-height: 300px;
+  
 }
 
 .meucarro{
@@ -187,7 +188,7 @@ footer{
 .side-links{
   background-image: url('../img/gremio.png');
   max-height: 600px;
-  min-height: 300px;
+  min-height: 197px;
   padding: 15px 0px 0px 20px;
   
   font-family: greatfighter;
