@@ -86,6 +86,11 @@ table{
   margin: auto;
 }
 
+table caption{
+  color: #fff;
+  margin-left: 820px;
+}
+
 th{
   width: 100px;
   padding: 5px;
@@ -123,7 +128,10 @@ footer{
 .card-text a{
   color: rgb(83, 155, 250);
 }
-
+.card-title a{
+  color: #fff;
+  font-family: 'Lobster';
+}
 .conteudo{
   clear: both;
   margin-top: 30px;
