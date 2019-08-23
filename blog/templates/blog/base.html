@@ -73,7 +73,7 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'logout' %}">
-                                    <img src="../../static/icons/sign-out.svg" alt="Logout"/>Logout</a>
+                                    <img src="../../static/icons/sign-out.svg" alt=""/>Logout</a>
                             </li>
     
                         {% else %}
@@ -89,8 +89,8 @@
                         {% endif %}
                     </ul>
     
-                    <form method="POST" action="{% url 'post_list' %}" class="form-inline my-2 my-lg-0">
-                        
+                    <form method="GET" action="{% url 'post_list' %}" class="form-inline my-2 my-lg-0">
+
                         <input name="pesquisa" class="form-control mr-sm-2" type="search" 
                         placeholder="Search" aria-label="Search">
                         

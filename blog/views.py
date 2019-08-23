@@ -10,9 +10,14 @@ from .forms import PostForm, CommentForm
 # Create your views here.
 
 # POST ==============================================================
-def post_list(request, pesquisa=None):
-    posts = Post.objects.filter(
-        published_date__lte=timezone.now()).order_by('published_date')
+def post_list(request):
+    pesquisa = request.GET.get('pesquisa', None)
+    if pesquisa is not None:
+        posts = Post.objects.filter(title__icontains=pesquisa)
+
+    else:
+        posts = Post.objects.filter(
+            published_date__lte=timezone.now()).order_by('published_date')
 
     return render(request, 'blog/post_list.html', {'posts': posts})
 
