@@ -1,12 +1,22 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+
+
 {% block title %}{{ block.super }}-Edit{{ post.title }}{% endblock %}
 {% block content %}
-    <h2>New post</h2>
-    <form method="POST" class="post-form">
-        {% csrf_token %}
+    
+    <div class="card bg-dark">
+        <div class="card-header">
+            <h2>New post</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" class="post-form">
+                {% csrf_token %}
         
-        {{ form.as_p }}
+                {{ form.as_p }}
         
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}

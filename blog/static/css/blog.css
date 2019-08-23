@@ -135,7 +135,6 @@ footer{
 .conteudo{
   clear: both;
   margin-top: 30px;
-  overflow: auto;
 }
 
 .date {
@@ -173,7 +172,8 @@ footer{
 
 .linkedin{
   
-  min-height: 300px;
+  min-height: 402px;
+  max-width: 250px;
   
 }
 
@@ -209,8 +209,8 @@ footer{
 
 .side-links{
   background-image: url('../img/gremio.png');
-  max-height: 600px;
-  min-height: 197px;
+  max-height: 198px;
+  min-height: 198px;
   padding: 15px 0px 0px 20px;
   
   font-family: greatfighter;

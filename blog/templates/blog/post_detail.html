@@ -18,11 +18,11 @@
                 {% if user.is_authenticated %}
                     <a class="btn btn-default"
                             href="{% url 'post_edit' pk=post.pk %}">            
-                        <span class=""></span></a>
+                            <img src="../../static/icons/pencil.svg" alt=""></a>
 
                     <a class="btn btn-default"
                             href="{% url 'post_remove' pk=post.pk %}">
-                        <span class=""></span></a>
+                        <img src="../../static/icons/trashcan.svg" alt="x">
                 {% endif %} 
             </div>
         
@@ -47,12 +47,12 @@
                                         <a class="btn btn-default" 
                                             href="{% url 'comment_remove' pk=comment.pk %}">
                     
-                                        <span class="glyphicon glyphicon-remove"></span></a>
+                                        <img src="../../static/icons/trashcan.svg" alt="x"></a>
                      
                                        <a class="btn btn-default" 
                                             href="{% url 'comment_approve' pk=comment.pk %}">
                             
-                                        <span class="glyphicon glyphicon-ok"></span></a>
+                                        <img src="../../static/icons/thumbsup.svg" alt="approve"></a>
                                     {% endif %}
 
                                     <strong>{{ comment.author }}</strong>
