@@ -22,20 +22,17 @@
 
                     <a class="btn btn-default"
                             href="{% url 'post_remove' pk=post.pk %}">
-                        <img src="../../static/icons/trashcan.svg" alt="x">
+                        <img src="../../static/icons/trashcan.svg" alt="x"></a>
                 {% endif %} 
             </div>
         
             <div class="card-body">
                 <h2 class="card-title">{{ post.title }}</h2>
-                <p>{{ post.text|linebreaksbr }}</p>
+                <p class="card-text">{{ post.text|linebreaksbr }}</p>
             </div>
 
     
             <div class="card-footer">
-    
-                <a class="btn btn-default" 
-                    href="{% url 'post_comment' pk=post.pk %}">Add Comment</a>
     
                     {% for comment in post.comments.all %}
                         {% if user.is_authenticated or comment.approved_comment %}
@@ -43,7 +40,12 @@
                             <div class="comment">
 
                                 <div class="date">{{ comment.created_date }}</div>
+                                
+                                <strong>{{ comment.author }}</strong>
+                                <p class="card-text">{{ comment.text|linebreaks }}</p>
                                     {% if not comment.approved_comment %}
+
+                                    
                                         <a class="btn btn-default" 
                                             href="{% url 'comment_remove' pk=comment.pk %}">
                     
@@ -55,10 +57,7 @@
                                         <img src="../../static/icons/thumbsup.svg" alt="approve"></a>
                                     {% endif %}
 
-                                    <strong>{{ comment.author }}</strong>
-                                    <p>{{ comment.text|linebreaks }}</p>
-
-                                </div>
+                            </div>
             
                         {% endif %}
 
@@ -66,6 +65,8 @@
                             <p>No comments here yet :(</p>
 
                     {% endfor %}
+                    <a class="btn btn-light" 
+                    href="{% url 'post_comment' pk=post.pk %}">Add Comment</a>
             </div>
         </div>
     </div>

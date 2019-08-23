@@ -4,7 +4,7 @@
 
 {% block content %}
     
-    <div class="card bg-dark text-white">
+    <div class="card bg-dark text-white" style="width: 40rem;">
         <div class="card-header">
             <h1>New comment</h1>
         </div>
@@ -13,9 +13,10 @@
                 {% csrf_token %}
         
                 {{ form.as_p }}
-        
+        </div>
+        <div class="card-footer">
                 <button type="submit" 
-                    class="save btn btn-default">Send
+                    class="save btn btn-light">Send
 
                 </button>
             </form>
