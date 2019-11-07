@@ -1,3 +1,3 @@
 Grêmio Web II Django.
 
-(G.W.II.D.)
+Projeto feito para a cadeira de Desenvolvimento Web 2.
